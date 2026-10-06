@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcos Rodrigues · Links</title>
+<meta name="description" content="Gestor de tráfego pago em Brasília. +R$ 5 milhões gerenciados em anúncios no Meta Ads e Google Ads. Peça seu diagnóstico grátis.">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marcos Rodrigues · Gestor de Tráfego Pago">
+<meta property="og:description" content="+R$ 5 milhões gerenciados em anúncios. Peça seu diagnóstico grátis.">
+<meta property="og:image" content="https://marcosadsofc.vercel.app/marcos-avatar.jpg">
+<meta property="og:url" content="https://marcosadsofc.vercel.app/links">
+<link rel="icon" href="/marcos-avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  /* Mesmas cores e fontes da página principal (index.html) */
+  :root{
+    --bg:#0B0B0C;--surface:#171719;--surface-2:#1E1E21;
+    --line:rgba(255,255,255,.09);--line-str:rgba(160,140,255,.30);
+    --text:#F5F4F1;--muted:#C2C1CB;--muted-2:#9A99A2;
+    --acc:#C4A9FF;--acc-deep:#7C3AED;--acc-dim:rgba(139,77,255,.14);--pur:#8B4DFF;
+    --sans:"Manrope","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --display:"Sora","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .glow{position:fixed;inset:-20% -40% auto;height:70vh;background:radial-gradient(ellipse at 50% 0%,rgba(139,77,255,.28),transparent 62%);pointer-events:none;z-index:0;}
+  main{position:relative;z-index:1;width:100%;max-width:460px;margin:0 auto;padding:clamp(36px,8vw,56px) 16px 40px;}
+
+  .head{text-align:center;}
+  .avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid var(--bg);box-shadow:0 0 0 2px var(--acc),0 16px 40px -10px rgba(139,77,255,.6);}
+  h1{font-family:var(--display);font-weight:800;font-size:1.45rem;letter-spacing:-.02em;line-height:1.15;margin:0;}
+  .role{color:var(--muted);margin:6px 0 0;font-weight:600;}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 0;padding:0;list-style:none;}
+  .chips li{font-size:.8rem;font-weight:700;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 12px;}
+  .chips li b{color:var(--acc);}
+
+  .links{display:grid;gap:12px;margin-top:28px;}
+  .lk{display:flex;align-items:center;gap:14px;min-height:64px;padding:14px 18px;border-radius:16px;border:1px solid var(--line-str);background:var(--surface);transition:transform .16s ease,border-color .2s ease,background .2s ease;}
+  .lk:hover{transform:translateY(-2px);border-color:var(--acc);background:var(--surface-2);}
+  .lk:focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+  .lk .ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--acc-dim);color:var(--acc);}
+  .lk .ic svg{width:22px;height:22px;}
+  .lk .tx{flex:1;min-width:0;}
+  .lk .tx b{display:block;font-weight:800;font-size:1.02rem;line-height:1.25;}
+  .lk .tx small{display:block;color:var(--muted-2);font-size:.84rem;margin-top:2px;}
+  .lk .go{flex:none;width:18px;height:18px;color:var(--muted-2);}
+
+  .lk.main{background:linear-gradient(180deg,#FFFFFF,#E6E6EC);color:#141416;border-color:transparent;box-shadow:0 14px 32px -12px rgba(0,0,0,.6);}
+  .lk.main:hover{background:linear-gradient(180deg,#FFFFFF,#EDEDF2);}
+  .lk.main .ic{background:#141416;color:#fff;}
+  .lk.main .tx small{color:#55545C;}
+  .lk.main .go{color:#141416;}
+
+  .sec{margin:30px 0 12px;font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);text-align:center;}
+  .app{display:block;padding:18px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(139,77,255,.12),rgba(23,23,25,.9) 55%);transition:transform .16s ease,border-color .2s ease;}
+  .app:hover{transform:translateY(-2px);border-color:var(--acc);}
+  .app:focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+  .app .top{display:flex;align-items:center;gap:12px;}
+  .app .logo{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1rem;color:#fff;background:linear-gradient(150deg,var(--pur),var(--acc-deep));}
+  .app b{font-family:var(--display);font-weight:800;font-size:1.08rem;}
+  .app .tag{display:block;color:var(--acc);font-size:.8rem;font-weight:700;margin-top:1px;}
+  .app p{margin:12px 0 0;color:var(--muted);font-size:.93rem;}
+  .app .cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:800;font-size:.92rem;color:var(--text);}
+  .app .cta svg{width:16px;height:16px;}
+
+  footer{margin-top:34px;text-align:center;color:var(--muted-2);font-size:.82rem;}
+  footer a{color:var(--muted);font-weight:700;}
+  footer a:hover{color:var(--acc);}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<main>
+  <header class="head">
+    <img class="avatar" src="/marcos-avatar.jpg" width="104" height="104" alt="Marcos Rodrigues">
+    <h1>Marcos Rodrigues</h1>
+    <p class="role">Gestor de tráfego pago · Brasília</p>
+    <ul class="chips">
+      <li><b>+R$ 5 milhões</b> gerenciados</li>
+      <li><b>+4 anos</b> de tráfego</li>
+      <li>Meta Ads e Google Ads</li>
+    </ul>
+  </header>
+
+  <nav class="links" aria-label="Links principais">
+    <a class="lk main" href="/#form">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+      <span class="tx"><b>Diagnóstico grátis</b><small>Preencha em 1 minuto, te chamo no WhatsApp</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+    </a>
+    <a class="lk" id="lk-wa" href="https://api.whatsapp.com/send?phone=5561985923986&amp;text=Ol%C3%A1%2C%20Marcos!%20Vim%20pelo%20seu%20Instagram." target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.24-3.71-.77-3.12-1.23-5.11-4.42-5.27-4.63-.15-.2-1.26-1.67-1.26-3.19 0-1.52.8-2.27 1.08-2.58.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.24.6.83 2.07.9 2.22.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.32.4-.46.53-.15.15-.31.31-.13.61.18.3.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.18-.2.77-.9.98-1.21.2-.31.41-.25.69-.15.28.1 1.76.83 2.07.98.31.15.51.22.58.35.08.13.08.75-.16 1.43z"/></svg></span>
+      <span class="tx"><b>Falar comigo no WhatsApp</b><small>Quem responde sou eu mesmo</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+    </a>
+    <a class="lk" href="/">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+      <span class="tx"><b>Resultados e como trabalho</b><small>Cases, preço fixo, sem fidelidade</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+    </a>
+  </nav>
+
+  <p class="sec">Meu app</p>
+  <a class="app" href="https://www.financeosapp.com.br/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links_marcosads" target="_blank" rel="noopener">
+    <span class="top">
+      <span class="logo" aria-hidden="true">F</span>
+      <span><b>FinanceOS</b><span class="tag">Seu controle financeiro completo</span></span>
+    </span>
+    <p>Saiba exatamente quanto sobra antes de acabar o mês. Entradas, saídas, cartões e metas, com rotina, treino e dieta no mesmo app.</p>
+    <span class="cta">Conhecer o FinanceOS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+  </a>
+
+  <footer>
+    <a href="https://instagram.com/marcosads.ofc" target="_blank" rel="noopener">@marcosads.ofc</a> · Brasília
+  </footer>
+</main>
+</body>
+</html>
