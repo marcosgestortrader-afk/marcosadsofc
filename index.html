@@ -500,12 +500,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
           Quero meu diagnóstico
         </button>
-        <p class="formnote">Ao enviar, seus dados chegam direto para mim e eu te retorno o quanto antes. ✅</p>
+        <p class="formnote">Ao clicar, o seu WhatsApp abre com as respostas já escritas. É só tocar em enviar. ✅</p>
       </form>
       <div class="lead-success" id="lead-success" hidden aria-live="polite">
         <div class="ls-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h3>Recebido! Chegou certinho para mim. ✅</h3>
-        <p>Obrigado! Vou dar uma olhada no seu caso e te chamo no WhatsApp que você deixou, o quanto antes.</p>
+        <h3>Quase lá! Falta só um toque. ✅</h3>
+        <p>Abrimos o seu WhatsApp com as respostas prontas. Toque em enviar na conversa para eu receber o seu caso. Se o WhatsApp não abriu, use o botão abaixo.</p>
+        <a class="btn btn-y" id="lead-wa" href="#" target="_blank" rel="noopener" style="margin-top:16px">Abrir o WhatsApp</a>
       </div>
       <div class="contact">
         <span>Instagram <a href="https://instagram.com/marcosads.ofc" target="_blank" rel="noopener">@marcosads.ofc</a></span>
@@ -527,7 +528,7 @@
   </footer>
 </div>
 
-<a class="fab" id="fab" href="#form" aria-label="Ir para o formulário de diagnóstico">
+<a class="fab" id="fab" href="#form" target="_blank" rel="noopener" aria-label="Falar com o Marcos no WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.24-3.71-.77-3.12-1.23-5.11-4.42-5.27-4.63-.15-.2-1.26-1.67-1.26-3.19 0-1.52.8-2.27 1.08-2.58.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.24.6.83 2.07.9 2.22.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.32.4-.46.53-.15.15-.31.31-.13.61.18.3.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.18-.2.77-.9.98-1.21.2-.31.41-.25.69-.15.28.1 1.76.83 2.07.98.31.15.51.22.58.35.08.13.08.75-.16 1.43z"/></svg>
 </a>
 
@@ -544,13 +545,38 @@
         setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in');});},1500);
       } else { showAll(); }
     }catch(e){ showAll(); }
+    // WhatsApp do Marcos: 55 + DDD + número, só dígitos
+    var WA='5561985923986';
+    function waLink(txt){ return 'https://wa.me/'+WA+'?text='+encodeURIComponent(txt); }
+    try{
+      var fabEl=document.getElementById('fab');
+      if(fabEl){ fabEl.href=waLink('Olá, Marcos! Vim pelo seu site e quero o diagnóstico gratuito.'); }
+    }catch(e){}
     try{
       var lf=document.getElementById('lead-form');
       if(lf){ lf.addEventListener('submit',function(ev){
         ev.preventDefault();
         if(!lf.checkValidity()){ lf.reportValidity(); return; }
+        function v(n){ var el=lf.elements[n]; return el&&el.value?el.value.trim():''; }
+        var linhas=[
+          'Olá, Marcos! Quero o meu diagnóstico gratuito.','',
+          '*Nome:* '+v('nome'),
+          '*WhatsApp:* '+v('zap'),
+          '*Negócio:* '+v('negocio'),
+          '*Já anuncia:* '+v('anuncia'),
+          '*Faturamento:* '+v('faturamento'),
+          '*Quer investir:* '+v('investimento'),
+          '*Objetivo:* '+v('objetivo'),
+          '*Quando começar:* '+v('quando')
+        ];
+        if(v('ig')){ linhas.push('*Instagram/site:* '+v('ig')); }
+        if(v('msg')){ linhas.push('','*Mensagem:* '+v('msg')); }
+        var url=waLink(linhas.join('\n'));
         var succ=document.getElementById('lead-success');
+        var btn=document.getElementById('lead-wa');
+        if(btn){ btn.href=url; }
         if(succ){ lf.setAttribute('hidden',''); succ.removeAttribute('hidden'); try{succ.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} }
+        window.location.href=url;
       }); }
     }catch(e){}
   })();
